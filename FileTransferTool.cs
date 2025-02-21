@@ -109,7 +109,7 @@ class RefactoringZaednoSoCorruption
 
     static byte[] SimulateCorruption(byte[] buffer, int chunkNumber)
     {
-        const double corruptionProbability = 0.1;
+        const double corruptionProbability = 0.1; // 10% chance of corruption
         Random rng = new Random();
         byte[] corruptedBuffer = null;
         bool simulateCorruption = rng.NextDouble() < corruptionProbability;
@@ -276,7 +276,6 @@ class RefactoringZaednoSoCorruption
             return ConvertByteArrayToHexString(hash);
         }
     }
-
 
     static string ConvertByteArrayToHexString(byte[] bytes)
     {
