@@ -5,7 +5,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 
-class RefactoringZaednoSoCorruption
+class FileTransferTool
 {
     static void Main()
     {
@@ -223,6 +223,7 @@ class RefactoringZaednoSoCorruption
         int retryCount = 0;
         while (retryCount < maxRetries)
         {
+            // Simulate corruption (for the rest of the attempts)
             if (retryCount > 0)
             {
                 possiblyCorruptedBuffer = SimulateCorruption(buffer, chunkNumber);
@@ -241,7 +242,7 @@ class RefactoringZaednoSoCorruption
 
             if (sourceChunkHash == destinationChunkHash)
             {
-                Console.WriteLine("  Block verification successful.");
+                Console.WriteLine("Block verification successful.");
                 return true;
             }
 
