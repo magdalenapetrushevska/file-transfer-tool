@@ -1,6 +1,6 @@
 # File Transfer Tool
 
-This project implements a secure and efficient file transfer mechanism with integrity verification, concurrency, and simulated corruption handling. It ensures files are transferred reliably by verifying the integrity of each block using MD5 hashes. If a block fails verification, it is retried with exponential backoff. The project also supports concurrent block transfers for improved performance.
+This project securely and efficiently transfers files while ensuring data integrity. It verifies each block using MD5 hashes and retries failed blocks with exponential backoff. It also supports concurrent transfers to speed up the process and includes simulated corruption handling.
 
 ## Features
 
