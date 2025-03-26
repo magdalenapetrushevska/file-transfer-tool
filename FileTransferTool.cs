@@ -157,7 +157,14 @@ class FileTransferTool
         {
             Console.Write($"Enter {inputFileType} file path: ");
             filePath = Console.ReadLine();
+
         } while (string.IsNullOrWhiteSpace(filePath));
+
+        if(!File.Exists(filePath))
+        {
+            Console.WriteLine("File does not exist. Please enter a valid file path.");
+            return ReadUserInputForSourceFilePath(inputFileType);
+        }   
 
         return filePath;
     }
